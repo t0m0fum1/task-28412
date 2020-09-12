@@ -12,8 +12,8 @@
   <body>
     <div class = "side-bar">
       <ul>
-        <li>
-          <ul>
+        <li class = "menu">
+          <ul class = "user-management">
             <% if user_signed_in? %>
               <li><%= link_to current_user.name, "/", class: "user-name" %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
@@ -23,10 +23,9 @@
             <% end %>
           </ul>
         </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li class = "menu"><%= link_to 'タスク一覧', "/", class: "hoge1" %></li>
+        <li class = "menu"><%= link_to 'タスク入力', "/", class: "hoge2" %></li>
+        <li class = "menu"><%= link_to 'レスポンス入力', "/", class: "hoge3" %></li>
       </ul>
     </div>
     <main>

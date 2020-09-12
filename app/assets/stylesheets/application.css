@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+
+ /* リセットcss */
+ body{
+   margin: 0;
+   display: flex;
+   min-height: 100vh;
+ }
+
+.side-bar{
+  width:20%;
+  min-width: 250px;
+}
+
+ ul{
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+ }
+
+.user-management{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .user-name,.login{
+  margin-right:20px;
+} */
+
+.menu{
+  text-align: center;
+  padding:10px 0;
+  border: 1px solid yellowgreen;
+}
+
+main{
+  flex: 1;
+  border: 1px solid yellowgreen;
+  padding-left: 10px;
+ }
