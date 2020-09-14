@@ -10,6 +10,27 @@
   </head>
 
   <body>
+    <div class = "side-bar">
+      <ul>
+        <li class = "menu">
+          <ul class = "user-management">
+            <% if user_signed_in? %>
+              <li><%= link_to current_user.name, "/", class: "user-name" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
+            <% else %>
+              <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+              <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+            <% end %>
+          </ul>
+        </li>
+        <li class = "menu"><%= link_to 'タスク一覧', "/", class: "hoge1" %></li>
+        <li class = "menu"><%= link_to 'タスク入力', "/", class: "hoge2" %></li>
+        <li class = "menu"><%= link_to 'レスポンスコンテンツ一覧', "/", class: "hoge3" %></li>
+        <li class = "menu"><%= link_to 'レスポンスコンテンツ入力', "/", class: "hoge4" %></li>
+      </ul>
+    </div>
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>
