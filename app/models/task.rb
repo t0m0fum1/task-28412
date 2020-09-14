@@ -3,9 +3,8 @@ class Task < ApplicationRecord
   belongs_to_active_hash :priority
   belongs_to :user
 
-
-  validates :text, :priority, presence: true
-
+  validates :text, presence: true, length: {maximum: 40 }
+  validates :priority, presence: true
   validates :priority_id, numericality: { other_than: 1 }
 
 end

@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.create(task_params)
     if @task.save
-      redirect_to root_path
+      redirect_to user_path(current_user.id)
     else
       render :new
     end
