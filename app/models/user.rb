@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   has_many :tasks
 
-  validates :name, presense: true, length: { maximum: 6 }
+  validates :name, presence: true, length: { maximum: 6 }
 
 end
