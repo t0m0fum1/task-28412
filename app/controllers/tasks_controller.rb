@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @task = "テスト"
+    @task = Task.includes(:user)
   end
+
 end
