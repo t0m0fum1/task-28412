@@ -1,8 +1,9 @@
-<h1>あなたのタスク一覧</h1>
+<h1>投稿されているタスク一覧</h1>
 <div class = "contents row">
-  <%= @tasks.each. do |task| %>
-    <span><%= task.created_at %></span>
-    <span><%= task.priority.name %></span>
+  <%= @tasks.each do |task| %>
+    <p><%= task.user.name%></p>
+    <p><%= task.created_at %></p>
+    <p><%= task.priority.name %></p>
     <p><%= task.text %></p>
   <% end %>
 </div>
