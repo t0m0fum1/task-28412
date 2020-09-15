@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'securerandom'
 
 RSpec.describe User, type: :model do
   describe '#create' do
