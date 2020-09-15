@@ -4,5 +4,6 @@
     <p><%= task.created_at %></p>
     <p><%= task.priority.name %></p>
     <p><%= task.text %></p>
+    <span><%= link_to '詳細', task_path(task.id) %></span>
   <% end %>
 </div>

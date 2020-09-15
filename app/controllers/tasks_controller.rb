@@ -1,4 +1,8 @@
 class TasksController < ApplicationController
+
+  before_action :confirm_task, only: [:show, :edit, :update, :destroy]
+
+
   def index
     @tasks = Task.includes(:user)
   end
@@ -16,6 +20,10 @@ class TasksController < ApplicationController
     end
   end
 
+  def show
+  end
+
+
 
 
 
@@ -23,6 +31,10 @@ class TasksController < ApplicationController
   private
   def task_params
     params.require(:task).permit(:text, :priority_id).merge(user_id: current_user.id)
+  end
+
+  def confirm_task
+    @task = Task.find(params[:id])
   end
 
 end
