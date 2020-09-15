@@ -1,0 +1,10 @@
+<div class = "contents row">
+  <div class = "container" >
+    <%= form_with(model: @task, local: true) do |f| %>
+      <h3>達成したいタスクを入力しましょう！</h3>
+      <%= f.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"priority-select"}) %>
+      <%= f.text_field :text, placeholder: "タスクを40文字以内で入力してください" %>
+      <%= f.submit "決定" %>
+    <% end %>
+  </div>
+</div>
