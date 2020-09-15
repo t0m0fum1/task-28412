@@ -23,8 +23,16 @@ class TasksController < ApplicationController
   def show
   end
 
+  def edit
+  end
 
-
+  def update
+    if @task.update(task_params)
+      redirect_to user_path(current_user.id)
+    else
+      render :edit
+    end
+  end
 
 
 
