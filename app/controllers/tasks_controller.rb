@@ -34,6 +34,14 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    if @task.destroy
+      redirect_to user_path(current_user.id)
+    else
+      render :show
+    end
+  end
+
 
 
   private
