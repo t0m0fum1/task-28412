@@ -14,7 +14,7 @@
  *= require_self
  */
 
- /* リセットcss */
+ /* application.css */
  body{
    margin: 0;
    display: flex;
@@ -48,3 +48,14 @@ main{
   border: 1px solid yellowgreen;
   padding-left: 10px;
  }
+
+
+ /* user_show.css */
+
+ #content-index,#content-index-title{
+  display: none;
+}
+
+.change-btn{
+  cursor: pointer;
+}
