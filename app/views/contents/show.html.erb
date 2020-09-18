@@ -1,0 +1,4 @@
+<p><%= image_tag @content.image.variant(resize:'500x500') %></p>
+<p><%= @content.message %></p>
+<p><%= link_to '編集', edit_content_path(@content.id) %></p>
+<p><%= link_to '削除', content_path(@content.id), method: :delete %></p>
