@@ -23,7 +23,11 @@
             <% end %>
           </ul>
         </li>
-        <li class = "menu"><%= link_to '投稿内容一覧', user_path(current_user.id), class: "hoge1" %></li>
+        <% if user_signed_in? %>
+          <li class = "menu"><%= link_to 'あなたの投稿内容一覧', user_path(current_user.id), class: "hoge1" %></li>
+        <% else %>
+          <li class = "menu"><%= link_to 'みんなの投稿内容一覧', "/", class: "hoge1" %></li>
+        <% end %>
         <li class = "menu"><%= link_to 'タスク入力', new_task_path, class: "hoge2" %></li>
         <li class = "menu"><%= link_to 'レスポンスコンテンツ入力', new_content_path, class: "hoge4" %></li>
       </ul>
