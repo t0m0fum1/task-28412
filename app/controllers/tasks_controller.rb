@@ -21,6 +21,8 @@ class TasksController < ApplicationController
   end
 
   def show
+    @contents = Content.all.sample(1)
+    
   end
 
   def edit
