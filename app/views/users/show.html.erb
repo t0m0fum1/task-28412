@@ -18,7 +18,7 @@
     コンテンツ一覧
     </h1>
     <% @contents.each do |content| %> 
-      <%= image_tag content.image.variant(resize:'500x500') %>
+      <%= image_tag content.image,class:'message-image' %>
       <p><%= content.message %></p>
       <p><%= link_to '詳細', content_path(content.id) %></p>
     <% end %>

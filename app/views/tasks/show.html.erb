@@ -1,9 +1,59 @@
 <h3><%= @task.text %></h3>
 <p><%= link_to '編集', edit_task_path(@task.id) %></p>
 <p><%= link_to '削除', task_path(@task.id), method: :delete %></p>
+<p id = "value" >評価する</p>
 
+<div id = "value-response">
+<p>このタスクを完了できましたか？</p>
+<p id = "yes">YES</p>
+<p id = "no" >NO</p>
+</div>
+
+<%# YES回答時の表示（80％）・再確認のYES回答時の表示（95%） %>
+<div id = "response-image">
 <% @contents.each do |content| %>
-  <p><%= image_tag content.image.variant(resize:'500x500') %></p> 
+  <%= image_tag content.image, class:'message-image' %>
+  <p><%= content.message %></p> 
 <% end %>
+<P><%= link_to 'トップに戻る',user_path(current_user.id)%></p>
+</div>
 
+<%# NO回答時の表示 %>
+<div id = "cheering">
+<%= image_tag "Notest1.jpeg",class:'message-image'%>
+<p>次回は達成できるように頑張りましょう。</p>
+<P><%= link_to 'トップに戻る',user_path(current_user.id)%></p>
+</div>
 
+<%# YES回答時の表示（20%） %>
+<div id = "answer-confirm">
+<p>嘘を付いていますね？本当に達成できましたか？</p>
+<p id = "yes-confirm">YES</p>
+<p id = "no-confirm" >NO</p>
+</div>
+
+<%# 確認時にNOを選択した場合の表示(3パターン) %>
+<div id = "scold-image1">
+<%= image_tag "feartest1.jpeg",class:'message-image'%>
+<p>あなたは見透かされている・・・</p>
+<P><%= link_to 'トップに戻る',user_path(current_user.id)%></p>
+</div>
+
+<div id = "scold-image2">
+<%= image_tag "feartest2.jpeg",class:'message-image'%>
+<p>気が緩んでいるぞ！！！</p>
+<P><%= link_to 'トップに戻る',user_path(current_user.id)%></p>
+</div>
+
+<div id = "scold-image3">
+<%= image_tag "feartest3.jpeg",class:'message-image'%>
+<p>後悔することになるぞ・・・</p>
+<P><%= link_to 'トップに戻る',user_path(current_user.id)%></p>
+</div>
+
+<%# 確認時にYESを選択した場合の表示（5%） %>
+<div id = "special-scold-image">
+<%= image_tag "specialfeartest1.jpg",class:'message-image'%>
+<p>そろそろでしょ？再確認でも嘘をつくのは？</p>
+<P><%= link_to 'トップに戻る',user_path(current_user.id)%></p>
+</div>
