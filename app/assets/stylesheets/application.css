@@ -49,13 +49,8 @@ main{
   padding-left: 10px;
  }
 
-
- /* user_show.css */
-
- #content-index,#content-index-title{
-  display: none;
-}
-
-.change-btn{
-  cursor: pointer;
+ /* 画像に対して共通のCSS */
+ .message-image{
+  width:300px;
+  height:300px;
 }
