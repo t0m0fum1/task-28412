@@ -13,20 +13,7 @@
   height:30px;
 }
 
-.signup-btn,.signin-btn{
-  margin-top: 30px;
-  border-radius: 80%;
-  cursor: pointer;
-  width:150px;
-  height:50px;
-  background-color:white;
-}
 
-.signup-btn:hover,.signin-btn:hover{
-  background-color:rgb(219, 245, 127);
-  transition: 0.3s;
-  font-weight: bold;
-}
 
 .field{
   margin-top: 20px;
@@ -42,9 +29,25 @@
 
 .change-btn{
   cursor: pointer;
+  box-shadow: 0 5px rgb(148, 241, 8);
+  background-color: rgb(214, 248, 162);
+  display: block;
+  width:100px;
+  height:40px;
+  text-align: center;
+  line-height: 40px;
+  margin-top:10px;
+
 }
 
-.contents-row{
-  overflow: hidden;
+.change-btn:hover{
+  cursor: pointer;
+  background-color: rgb(214, 248, 162);
 }
 
+.change-btn:active{
+  cursor: pointer;
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}

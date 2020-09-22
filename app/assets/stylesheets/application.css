@@ -47,7 +47,6 @@ main{
  a{
   text-decoration: none;
   color: inherit;
-  display: block;
 }
 
 a:hover{
@@ -59,10 +58,28 @@ a:hover{
 .nav{
   height:50px;
   line-height: 50px;
+  display: block;
 }
 
  /* 画像に対して共通のCSS */
  .message-image{
   width:300px;
   height:300px;
+}
+
+
+/* ボタン関連のCSS */
+.signup-btn,.signin-btn,.post-btn{
+  margin-top: 30px;
+  border-radius: 80%;
+  cursor: pointer;
+  width:150px;
+  height:50px;
+  background-color:white;
+}
+
+.signup-btn:hover,.signin-btn:hover,.post-btn:hover{
+  background-color:rgb(219, 245, 127);
+  transition: 0.3s;
+  font-weight: bold;
 }
