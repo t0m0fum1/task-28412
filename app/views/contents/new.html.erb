@@ -1,10 +1,12 @@
-<div class = "contents row">
+<div>
   <div class = "container" >
     <%= form_with(model: @content, local: true) do |f| %>
       <h3>達成時に表示したい画像を選びましょう！！</h3>
+      <p class = "nav-text">表示したい画像を選んでください</p>
       <%= f.file_field :image %>
-      <%= f.text_field :message, placeholder: "メッセージを40文字以内で入力してください" %>
-      <%= f.submit "決定" %>
+      <p class = "nav-text">表示した画像に合ったメッセージを入れてみましょう</p>
+      <%= f.text_field :message, placeholder: "メッセージを40文字以内で入力してください",class:"message-form-area" %><br>
+      <%= f.submit "決定",class: "post-btn" %>
     <% end %>
   </div>
 </div>
