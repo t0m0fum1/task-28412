@@ -6,7 +6,7 @@
     <h3>緊張感を持って取り組みましょう！</h3>
     <h3>タスクの評価を行う場合は、＜＜詳細＞＞をクリックしてください。</h3>
     <hr>
-    <div class = "bar" >
+    <div class = "contents-row" >
     <% @tasks.each do |task| %>
       <p>投稿日時：<%= task.created_at %></p>
       <p>優先順位：<%= task.priority.name %></p>
@@ -23,7 +23,7 @@
     <h3>コンテンツの削除や編集を行う場合は、＜＜詳細＞＞をクリックしてください。</h3>
     <hr>
 
-    <div class = "bar" >
+    <div class = "contents-row" >
     <% @contents.each do |content| %> 
       <%= image_tag content.image,class:'message-image' %>
       <p><%= content.message %></p>

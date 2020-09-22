@@ -2,6 +2,7 @@
 <h3>みんなに負けないように頑張りましょう！！</h3>
 <hr>
 <div class = "contents-row">
+  <div>
   <% @tasks.each do |task| %>
     <p>ユーザー名：<%= task.user.name%></p>
     <p>投稿日時　：<%= task.created_at %></p>
@@ -9,4 +10,5 @@
     <p>タスク　　：<%= task.text %></p>
     <hr>
   <% end %>
+  </div>
 </div>

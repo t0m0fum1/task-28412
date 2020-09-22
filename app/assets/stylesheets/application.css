@@ -83,3 +83,11 @@ a:hover{
   transition: 0.3s;
   font-weight: bold;
 }
+
+/* タスク及びコンテンツの一覧表示を修正 */
+.contents-row{
+  overflow: scroll;
+  background-color: rgb(229, 243, 178);
+  width:90%;
+  height:100vh;
+}
