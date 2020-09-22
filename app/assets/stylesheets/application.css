@@ -19,6 +19,7 @@
    margin: 0;
    display: flex;
    min-height: 100vh;
+   background-color:rgb(240, 243, 233);
  }
 
 .side-bar{
@@ -32,22 +33,33 @@
    margin: 0;
  }
 
-.user-management{
-  display: flex;
-  justify-content: space-around;
-}
-
 .menu{
   text-align: center;
-  padding:10px 0;
-  border: 1px solid yellowgreen;
+  border-bottom: 1px solid rgb(184, 181, 181);
 }
 
 main{
   flex: 1;
-  border: 1px solid yellowgreen;
-  padding-left: 10px;
+  border: 1px solid rgb(184, 181, 181);
+  padding-left: 30px;
  }
+
+ a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a:hover{
+  font-weight: bold;
+  background-color: rgb(214, 248, 162);
+  transition: 0.3s;
+}
+
+.nav{
+  height:50px;
+  line-height: 50px;
+}
 
  /* 画像に対して共通のCSS */
  .message-image{

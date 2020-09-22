@@ -1,9 +1,12 @@
 <h1>投稿されているタスク一覧</h1>
-<div class = "contents row">
+<h3>みんなに負けないように頑張りましょう！！</h3>
+<hr>
+<div class = "contents-row">
   <% @tasks.each do |task| %>
-    <p><%= task.user.name%></p>
-    <p><%= task.created_at %></p>
-    <p><%= task.priority.name %></p>
-    <p><%= task.text %></p>
+    <p>ユーザー名：<%= task.user.name%></p>
+    <p>投稿日時　：<%= task.created_at %></p>
+    <p>優先順位　：<%= task.priority.name %></p>
+    <p>タスク　　：<%= task.text %></p>
+    <hr>
   <% end %>
 </div>
