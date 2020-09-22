@@ -23,7 +23,7 @@
 
 .side-bar{
   width:20%;
-  min-width: 250px;
+  background-color: rgb(216, 234, 245);
 }
 
  ul{
@@ -32,25 +32,96 @@
    margin: 0;
  }
 
-.user-management{
-  display: flex;
-  justify-content: space-around;
-}
-
 .menu{
   text-align: center;
-  padding:10px 0;
-  border: 1px solid yellowgreen;
+  border-bottom: 1px solid rgb(184, 181, 181);
 }
 
 main{
   flex: 1;
-  border: 1px solid yellowgreen;
-  padding-left: 10px;
+  border: 1px solid rgb(184, 181, 181);
+  padding-left: 30px;
  }
+
+ a{
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover{
+  background-color: rgb(214, 248, 162);
+  transition: 0.3s;
+}
+
+.nav{
+  height:50px;
+  line-height: 50px;
+  display: block;
+}
+
+.nav:hover{
+  font-weight: bold;
+}
 
  /* 画像に対して共通のCSS */
  .message-image{
-  width:300px;
-  height:300px;
+  width:500px;
+  height:500px;
+}
+
+.message-view{
+  font-size:30px;
+  font-weight: bold;
+}
+
+
+/* ボタン関連のCSS */
+.signup-btn,.signin-btn,.post-btn{
+  margin-top: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  width:150px;
+  height:50px;
+  background-color:white;
+}
+
+.signup-btn:hover,.signin-btn:hover,.post-btn:hover{
+  background-color:rgb(219, 245, 127);
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+/* タスク及びコンテンツの一覧表示を修正 */
+.contents-row{
+  overflow: scroll;
+  background-color:rgb(240, 243, 233);
+  width:95%;
+  height:100vh;
+}
+
+@media (max-width: 1000px){
+
+  .side-bar{
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(216, 234, 245);
+    width: 100%;
+  }
+
+  .nav-list{
+    display: flex;
+  }
+
+  .menu{
+    flex: 1;
+  }
+
+  main{
+    margin-bottom: 51px;
+  }
+
+  .nav{
+    font-size:13px;
+  }
+
 }

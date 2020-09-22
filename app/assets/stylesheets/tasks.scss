@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// show.htmlのCSS
 #value-response{
   display: none;
 }
@@ -32,4 +33,47 @@
 
 #special-scold-image{
   display: none;
+}
+
+// 評価ボタンのCSS
+#value,#yes,#no,#yes-confirm,#no-confirm,.edit-action,.delete-action{
+  cursor: pointer;
+  box-shadow: 0 5px rgb(148, 241, 8);
+  background-color: rgb(214, 248, 162);
+  display: block;
+  width:100px;
+  height:40px;
+  text-align: center;
+  line-height: 40px;
+  margin-top:10px;
+}
+
+#value:hover,#yes:hover,#no:hover,#yes-confirm:hover,#no-confirm:hover,.edit-action:hover,.delete-action:hover{
+  cursor: pointer;
+  background-color: rgb(214, 248, 162);
+}
+
+#value:active,#yes:active,#no:active,#yes-confirm:active,#no-confirm:active,.edit-action:active,.delete-action:active{
+  cursor: pointer;
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+
+
+
+
+
+// new.html,edit.htmlのCSS
+.task-form-area,.priority-select{
+  width:300px;
+  height:30px;
+}
+
+.container{
+  text-align: center; 
+}
+
+.nav-text{
+  margin-top: 10px;
 }

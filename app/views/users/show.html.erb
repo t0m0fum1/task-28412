@@ -2,25 +2,34 @@
 
 <div class = "index">
   <div id = "task-index">
-    <h1>
-    投稿されているタスク一覧
-    </h1>
+    <h1>あなたのタスク</h1>
+    <h3>緊張感を持って取り組みましょう！</h3>
+    <h3>タスクの評価を行う場合は、＜＜詳細＞＞をクリックしてください。</h3>
+    <hr>
+    <div class = "contents-row" >
     <% @tasks.each do |task| %>
-      <p><%= task.created_at %></p>
-      <p><%= task.priority.name %></p>
-      <p><%= task.text %></p>
-      <p><%= link_to '詳細', task_path(task.id) %></p>
+      <p>投稿日時：<%= task.created_at %></p>
+      <p>優先順位：<%= task.priority.name %></p>
+      <p>タスク　：<%= task.text %></p>
+      <p><%= link_to '＜＜詳細＞＞', task_path(task.id) %></p>
+      <hr>
     <% end %>
+    </div>
   </div>
 
   <div id = "content-index">
-    <h1>
-    コンテンツ一覧
-    </h1>
+    <h1>コンテンツ一覧</h1>
+    <h3>好きな画像とメッセージを予め投稿しておきましょう！！</h3>
+    <h3>コンテンツの削除や編集を行う場合は、＜＜詳細＞＞をクリックしてください。</h3>
+    <hr>
+
+    <div class = "contents-row" >
     <% @contents.each do |content| %> 
       <%= image_tag content.image,class:'message-image' %>
-      <p><%= content.message %></p>
-      <p><%= link_to '詳細', content_path(content.id) %></p>
+      <p class = "message-view"><%= content.message %></p>
+      <p><%= link_to '＜＜詳細＞＞', content_path(content.id) %></p>
+      <hr>
     <% end %>
+    </div>
   </div>
 </div>

@@ -2,11 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ユーザー登録画面のCSS
 
+.content-area{
+  text-align: center;
+}
+
+.form-area{
+  width:150px;
+  height:30px;
+}
+
+
+
+.field{
+  margin-top: 20px;
+}
+
+
+
+
+// ユーザーの詳細画面のCSS
 #content-index,#content-index-title{
   display: none;
 }
 
 .change-btn{
   cursor: pointer;
+  box-shadow: 0 5px rgb(148, 241, 8);
+  background-color: rgb(214, 248, 162);
+  display: block;
+  width:100px;
+  height:40px;
+  text-align: center;
+  line-height: 40px;
+  margin-top:10px;
+
+}
+
+.change-btn:hover{
+  cursor: pointer;
+  background-color: rgb(214, 248, 162);
+}
+
+.change-btn:active{
+  cursor: pointer;
+  box-shadow: none;
+  position: relative;
+  top: 5px;
 }

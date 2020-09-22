@@ -1,4 +1,5 @@
 window.addEventListener('load',function(){
+  const Action = document.getElementById("action");
   const Value = document.getElementById("value");
   const valueResponse = document.getElementById("value-response");
   const responseImage = document.getElementById("response-image");
@@ -16,7 +17,7 @@ window.addEventListener('load',function(){
 
   Value.addEventListener('click',function(){
     valueResponse.style.display = "block";
-    Value.style.display = "none";
+    Action.style.display = "none";
   });
 
   Yes.addEventListener('click',function(){

@@ -1,4 +1,5 @@
+<h1>各コンテンツの詳細画面です。</h1>
 <%= image_tag @content.image, class:'message-image' %>
-<p><%= @content.message %></p>
-<p><%= link_to '編集', edit_content_path(@content.id) %></p>
-<p><%= link_to '削除', content_path(@content.id), method: :delete %></p>
+<p class = "message-view"><%= @content.message %></p>
+<p><%= link_to '編集する', edit_content_path(@content.id),class:"edit-action" %></p>
+<p><%= link_to '削除する', content_path(@content.id), method: :delete,class:"delete-action" %></p>
