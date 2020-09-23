@@ -21,7 +21,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @contents = Content.all.sample(1)
+    @contents = Content.where(user_id: current_user.id).sample(1)
     
   end
 
